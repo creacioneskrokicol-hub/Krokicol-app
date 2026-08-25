@@ -1,4 +1,4 @@
-const CACHE_NAME = "krokicol-v3";
+const CACHE_NAME = "krokicol-v4";
 
 const ARCHIVOS = [
     "./",
@@ -14,6 +14,7 @@ self.addEventListener("install", (event) => {
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then((cache) => cache.addAll(ARCHIVOS))
+            .then(() => self.skipWaiting())
     );
 });
 
@@ -46,6 +47,6 @@ self.addEventListener("activate", (event) => {
                     .filter((nombre) => nombre !== CACHE_NAME)
                     .map((nombre) => caches.delete(nombre))
             )
-        )
+        ).then(() => self.clients.claim())
     );
 });
