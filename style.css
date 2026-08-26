@@ -14,8 +14,8 @@ html {
 }
 
 body {
-    background: #050505;
-    color: white;
+    background: #f8f5ef;
+    color: #111111;
     font-family: "Poppins", sans-serif;
     margin: 0;
     overflow-x: hidden;
@@ -32,18 +32,20 @@ a {
 ================================ */
 
 .header {
-    height: 80px;
+    height: 90px;
     padding: 0 8%;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    background: #050505;
+    background: #f8f5ef;
+
+    border-bottom: 1px solid #e7e2da;
 }
 
 .logo {
-    color: #ff3025;
+    color: #111111;
 
     font-family: "Anton", sans-serif;
     font-size: 27px;
